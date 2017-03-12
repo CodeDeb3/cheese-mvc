@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title th:text="${title}">Title</title>
-</head>
+<head th:replace="fragments :: head"></head>
+    <!--<meta charset="UTF-8"/>-->
+    <!--<title th:text="${title}">Title</title>-->
+
 <body>
 <!-- title needs to match name of attribute in controller model.addattribute-->
     <h1 th:text="${title}">Default title</h1>
 
+    <nav th:replace="fragments :: navigation"></nav>
+
     <p th:unless="${cheeses} and ${cheeses.size()}">no cheese :( </p>
 
-
-    <a href="/cheese/add">Add Cheese</a>
+    <!--<a href="/cheese/add">Add Cheese</a>-->
 
     <ul>
         <!--this is a loop cheese is iterator and is also looking at the value-->
