@@ -6,15 +6,30 @@
      it will be inserted correctly-->
     <title th:text="${title}">My Cheeses</title>
 
-    <link rel="stylesheet" th:href="@{css/styles.css}"/>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}"/>
+    <link rel="stylesheet" th:href="@{/css/skeleton.css}"/>
     <script type ="text/javascript" th:src="@{/js/script.js}"></script>
+    <link th:href="@{http://fonts.googleapis.com/css?family=Raleway:400,300,600}" rel="stylesheet" type="text/css"/>
+
 
 </head>
 <body>
-<nav th:fragment="navigation">
-    <a href="/cheese">List</a>
-    <a href="/cheese/add">Add</a>
-</nav>
+
+<!--Header image and title -->
+<div>
+    <div class ="row">
+        <h2 th:text="${title}">Default Title</h2>
+    </div>
+</div>
+<div th:fragment="navigation" class = "container">
+
+    <div class ="row">
+        <a class ="button" href="/cheese">List</a>
+        <a class = "button" href="/cheese/add">Add</a>
+        <a class = "button" href="/cheese/delete">Remove</a>
+    </div>
+</div>
 
 </body>
 </html>

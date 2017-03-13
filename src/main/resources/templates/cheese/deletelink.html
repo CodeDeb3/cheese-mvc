@@ -1,0 +1,35 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org/">-->
+<!--<head th:replace="fragments :: head"></head>-->
+<!--<body>-->
+
+<!--<nav th:replace="fragments :: title"></nav>-->
+<!--<nav th:replace="fragments :: navigation"></nav>-->
+
+<!--<div class="container">-->
+    <!--<div class="row">-->
+        <!--<table>-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>Name</th>-->
+                <!--<th>Description</th>-->
+                <!--<th>Delete Link</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr th:each="cheese : ${cheeses}">-->
+                <!--<td th:text="${cheese.key}"></td>-->
+                <!--<td th:text="${cheese.value}"></td>-->
+                <!--&lt;!&ndash; It's not good practice to hard code links in such a manner, consider what would happen if &ndash;&gt;-->
+                <!--&lt;!&ndash; you deployed this application to a web server, localhost would not be valid. &ndash;&gt;-->
+                <!--&lt;!&ndash; To overcome this, you would need to use your model to provide your url &ndash;&gt;-->
+                <!--<td><a th:href="${'http://localhost:8080/cheese/delete/' + cheese.key}">Delete</a></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--</html>-->

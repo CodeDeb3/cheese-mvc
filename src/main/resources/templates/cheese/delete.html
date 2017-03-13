@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+
+<nav th:replace="fragments :: title"></nav>
+<nav th:replace="fragments :: navigation"></nav>
+
+<div class="container">
+    <div class="row">
+        <form method ="post" action ="/cheese/delete">
+            <div class="three columns">
+                <label>Cheese To Delete</label>
+            </div>
+
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <div>
+                <!-- name specifies the variable that will be passed into the controller-->
+
+                <select name="cheesetoDelete">
+                    <!-- value specifies what the 'delete' variable will be set to -->
+                    <option th:each="cheese : ${cheeses}" th:value="${cheese.key}" th:text="${cheese.key}"></option>
+
+
+                </select>
+            </div>
+            <div class = "three columns">
+                <input class="button-danger" type="submit" value="delete"/>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
